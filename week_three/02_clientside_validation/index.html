@@ -21,7 +21,43 @@
 
 <body>
      <h1>Student Information</h1>
+         <form method="post" action="">
+          <fieldset> <!-- groups like info/parts of the form-->
+               <legend> Student Details </legend><!--explains the info that is contained in the fieldset-->
+               <!--full name - required -->
+               <p> * is required information </p>
+               <label for="fullname">Full Name: *</label>
+               <input type="text" name="fullname" id="fullname" required>
 
+                <!--email - required -->
+               <label for="email">Email: *</label>
+               <input type="email" name="email" id="email" placeholder="email" required>
+
+               <!--date of birth - optional-->
+               <label for="birthday">Date of Birth:</label>
+               <input type="date" name="birthday" id="birthday">
+
+               <!--program-->
+               <label for="program">Program *</label>
+               <select id="program" name="program" required>
+                    <option value=""> Select Your Program </option>
+                    <option value="computer_programming">Computer Programming </option>
+                    <option value="web_development">Web Development </option>
+                    <option value="cybersecurity"> Cybersecurity</option>
+               </select>
+
+               <!--Password-->
+               <label for="password">Password: *</label>
+               <input type="password" name="password" id="password" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$" title="Must contain one number, one uppercase character, one lowercase character, a special character and be 8 characters in length" required>
+               <!--Password Confirm-->
+               <label for="password_confirm">Confirm Password: *</label>
+               <input type="password" name="password_confirm" id="password_confirm" required>
+
+               <!--submit button-->
+               <input type="submit" value="Submit Form">
+
+          </fieldset>
+     </form>  
      
 </body>
 
