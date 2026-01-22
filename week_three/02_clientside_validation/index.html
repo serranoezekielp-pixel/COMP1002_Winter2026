@@ -22,6 +22,45 @@
 <body>
      <h1>Student Information</h1>
 
+     <form method="post" action="">
+          <fieldset>
+          <legend> Student Details </legend><!--explains the info
+          that is contained in the fieldset-->
+          <label for="fullname">Full Name:</label>|
+          <input type="text" name="fullname" id="fullname">
+
+          <label for="email">Email:</label>|
+          <input type="text" name="email" id="email"
+          placeholder="email">
+
+          <label for="birthday">Date of birth:</label>|
+          <input type="text" name="birthday" id="birthday">
+
+           <!--program-->
+          <label for="program">Program:</label>|
+          <select id="program" name="program">
+               <option value="">Select your program </option>
+               <option value="computer programmming"></option>
+               <option value="Web Development"></option>
+               <option value="CyberSecurity"></option>
+
+
+          </select>
+           <!--Password-->
+          <label for="password">Password:</label>
+          <input type="text" name="password" id="password">
+
+          <!--Password confirm-->
+          <label for="password">Confirm Password:</label>
+          <input type="text" name="password_confirm" id="password_confirm">
+
+          <!--submit button-->
+          <input type="submit" value="Submit Form">
+
+          </fieldset>
+
+     </form>
+
      
 </body>
 
