@@ -24,31 +24,34 @@
 
      <form method="post" action="">
           <fieldset>
+          <p> * is required information </p>
           <legend> Student Details </legend><!--explains the info
           that is contained in the fieldset-->
           <label for="fullname">Full Name:</label>|
           <input type="text" name="fullname" id="fullname">
 
-          <label for="email">Email:</label>|
-          <input type="text" name="email" id="email"
-          placeholder="email">
+          <label for="email">Email:* </label>|
+          <input type="text" name="email" id="email" placeholder="email" required>
 
           <label for="birthday">Date of birth:</label>|
-          <input type="text" name="birthday" id="birthday">
+          <input type="date" name="birthday" id="birthday">
 
            <!--program-->
-          <label for="program">Program:</label>|
+          <label for="program">Program: *</label>|
           <select id="program" name="program">
                <option value="">Select your program </option>
-               <option value="computer programmming"></option>
-               <option value="Web Development"></option>
-               <option value="CyberSecurity"></option>
+               <option value="computer programmming">Computer Programming </option>
+               <option value="Web Development">Web Development </option>
+               <option value="CyberSecurity">CyberSecurity </option>
 
 
           </select>
            <!--Password-->
-          <label for="password">Password:</label>
-          <input type="text" name="password" id="password">
+          <label for="password">Password: *</label>
+          <input type="password" name="password" id="password" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$
+"title ="Must contain one number, one uppercase character, one lowercase character and be 8 characters in length and a special character" required>
+          
+
 
           <!--Password confirm-->
           <label for="password">Confirm Password:</label>
