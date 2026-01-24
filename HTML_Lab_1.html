@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <title>Lab 1 - Building a Valid, Accesible & User Friendly HTML Form</title>
+
+     <!--A bit of web design -->
+     <style>
+          body {
+  background: #eee;
+  font-family: Arial, sans-serif;
+}
+
+form {
+  background: white;
+  width: 300px;
+  margin: 20px auto;
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+
+label {
+  display: block;
+  margin-top: 10px;
+  
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+select,
+textarea {
+  width: 100%;
+  padding: 5px;
+  margin-top: 5px;
+  border: 1px solid #aaa;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+  margin-right: 5px;
+}
+
+input[type="submit"] {
+  margin-top: 15px;
+  padding: 7px 20px;
+  background: #3399ff;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background: #287acc;
+}
+     </style>
+</head>
+
+<body>
+
+     <h1>User Registration Form</h1>
+
+     <!-- form starts here -->
+     <form method="post" action="">
+
+          <fieldset>
+
+               <!--legend explains the info in the fieldset -->
+               <legend>User Registration Form</legend>
+
+               <p>Fill up the blank details</p>
+
+               <!--First name-->
+               <label for="firstname">First Name:</label>
+               <input type="text" name="First Name" id="firstname" placeholder="First Name">
+
+               <!--Last Name-->
+               <label for="LastName">Last Name:</label>
+               <input type="text" name="lastname" id="lastname" placeholder="Last Name">
+
+               <!--Email address-->
+               <label for="emailaddress">Email Address: </label>
+               <input type="email" name="email" id="email" placeholder="you@example.com" required>
+
+               <!--Password-->
+               <label for="password">Password: *</label>
+               <input type="password" name="password" id="password" placeholder="Min. 8 Characters" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$
+               "title ="Must contain one number, one uppercase character, one lowercase character and be 8 characters in length and a special character" required>
+
+               <!--confirm password-->
+               <label for="password_confirm">Confirm Password:</label>
+               <input type="password" name="password_confirm" id="password_confirm" placeholder="Retype Password">
+
+               <!-- Date of birth -->
+               <label for="birthday">Date of Birth:</label>
+               <input type="date" name="birthday" id="birthday">
+                 
+               <!--Gender options-->
+               <label>Gender:</label>
+               <label><input type="radio" name="gender" value="male"> Male</label>
+               <label><input type="radio" name="gender" value="female"> Female</label>
+               <label><input type="radio" name="gender" value="other"> Other</label>
+
+               <!--Country Choices-->
+               <label for="country">Country:</label>
+               <select id="country" name="country">
+               <option value="">Select Country</option>
+               <option value="usa">USA</option>
+               <option value="canada">Canada</option>
+               <option value="mexico">Mexico</option>
+               </select>
+
+               <!-- Preferences -->
+               <label><input type="checkbox" name="subscribe" value="yes"> Subscribe to Newsletter</label>
+               <label><input type="checkbox" name="terms" value="agree"> I agree to the Terms & Conditions</label>
+
+               <!--Additional comments-->
+               <label for="comments">Comments:</label>
+               <textarea id="comments" name="comments" placeholder="Any additional comments..."></textarea>
+
+               <!--submit button-->
+               <input type="submit" value="Submit Form">
+
+          </fieldset>
+
+     </form>
+
+</body>
+</html>
