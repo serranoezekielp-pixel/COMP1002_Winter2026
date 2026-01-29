@@ -12,7 +12,7 @@ body {
 
 .page-header,
 .page-footer {
-  border: 2px dashed #999;
+  border: 2px dashed #BADA55;
   padding: 12px;
   margin-bottom: 16px;
 }
@@ -37,23 +37,43 @@ code {
 
 /* Element selector */
 
+p {
+  color : #333; 
+}
 
 /* Contextual selector (descendant)  - look up combinators on mdn web docs */
 
+article > p {
+  color: #1a5fb4; 
+}
 
 /* Pseudo-class: first paragraph of its type */
-
+p:hover {
+  color: red; 
+}
 
 /* Class selector */
+.note {
+  color:#ff598f; 
+}
 
-/* Attribute selector (article attribute affects paragraph) */
+/* Attribute selector */
 
+article[data-role="student"] {
+  background-color: #BADA55; 
+}
 
 /* ID selector (strongest so far) */
 
+#special-note {
+  color: #ff3800;
+}
 
 /* Pseduo - Element */
-
+article p:first-of-type::before {
+  content: "FIRST PARAGRAPH";
+  color: #000; 
+}
 
 
 /* Focus Questions 
@@ -84,14 +104,39 @@ code {
 
 /* Element selector */
 
+p {
+  color: #BADA55; 
+}
+
+#q1 {
+  color: red;
+}
+
+.quiz-item {
+  color: blue; 
+}
+
 
 
 /* ROUND TWO/ Q2 - What background colour will the element have? */
 
+.quiz-item {
+  background-color: #C0FFEE; 
+}
 
+.highlight {
+  background-color: #BADA55; 
+}
 
 /* ROUND THREE/ Q3 - What colour will the element be? */
 
+p[data-level="hard"] {
+  background-color: red; 
+}
+
+.quiz-item {
+  background-color: orange; 
+}
 
 
 /* =========================
@@ -106,12 +151,20 @@ code {
 
 /* Visualize the box */
 
+.form-box {
+  display:block; 
+  border: 2px dashed red; 
+  padding-bottom: 20px;  
+  margin: 100px 30px 40px 10px; 
+
+}
 
 /* Each field becomes a visible block with spacing */
 .field {
   display: block;
   border: 2px dashed #aaa;
   padding: 10px;
+  margin: 10px 0; 
 }
 
 .field span {
@@ -123,7 +176,11 @@ code {
 /* Inputs/selects: give visible borders so students can inspect sizing */
 .field input,
 .field select {
- 
+  width: 100%; 
+  border: 2px solid #999; 
+  padding: 10px; 
+  box-sizing: border-box;
+  border-radius: 2px; 
 }
 
 /* Primary button */

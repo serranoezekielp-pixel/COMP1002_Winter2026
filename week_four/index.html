@@ -6,17 +6,18 @@
   <title>CSS Practice: Selectors, Cascade, Box Model</title>
   <!-- Activity One - How To Add CSS-->
    <!-- embedded, inline and external -->
-  <link rel="stylesheet" href="css/styles.css" />
-  <style>
+  <link rel="stylesheet" href="css/styles.css" /><!-- External stylesheet - best practce :) -->
+  <!-- <style> embedded css, don't do this! Bad practice 
     h1 {
         color: red; 
-    }
-  </style>
+  }
+  </style>-->
 </head>
 
 <body>
   <header class="page-header">
-    <h1 style="color: red;">CSS Practice Lab</h1>
+    <!-- inline css - don't do this, bad practice!<h1 style="color: red;">CSS Practice Lab</h1>-->
+     <h1> CSS Practice Lab</h1>
     <p class="subtitle">Selectors → Cascade & Specificity → Box Model</p>
   </header>
 
@@ -34,12 +35,11 @@
       <h3 class="card-title">Student Profile</h3>
 
       <!-- Activity Two - let's target this paragraph using a variety of different selectors -->
-      <p class="note" id="special-note">
-        This paragraph has:
-        <code>p</code> (element), <code>.note</code> (class),
-        <code>#special-note</code> (id), and <code>[data-role]</code> (attribute) rules available.
-      </p>
-
+        <p class="note" id="special-note">
+          This paragraph has:
+          <code>p</code> (element), <code>.note</code> (class),
+          <code>#special-note</code> (id), and <code>[data-role]</code> (attribute) rules available.
+        </p>
       <a class="link" href="#section-2">Jump to Section 2</a>
 
     </article>
