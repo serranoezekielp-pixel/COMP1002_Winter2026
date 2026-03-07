@@ -76,15 +76,15 @@ img {
 
 
 /* Your Code Here! */ 
-
+/*Use grid for display and make it responsive with media queries.*/
 .cards {
   display: grid;
-  grid-template-columns: 1fr;  /* single column on small screens */
-  gap: 1.5rem;                 /* space between cards */
+  grid-template-columns: 1fr; 
+  gap: 1.5rem;                 
   margin: 1.5rem auto;
 }
 
-/* Tablet: 2 columns */
+/*For smaller screens, the cards will stack in a single column.*/
 @media (min-width: 600px) {
   .cards {
     grid-template-columns: repeat(2, 1fr);
