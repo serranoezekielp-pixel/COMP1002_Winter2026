@@ -74,14 +74,22 @@ img {
   align-items: center;
 }
 
-.layout {
+
+/* Your Code Here! */ 
+
+.cards {
   display: grid;
-  grid-template-columns: 2fr 1fr;
-  gap: 1rem;
+  grid-template-columns: 1fr;  /* single column on small screens */
+  gap: 1.5rem;                 /* space between cards */
   margin: 1.5rem auto;
 }
 
-/* Your Code Here! */ 
+/* Tablet: 2 columns */
+@media (min-width: 600px) {
+  .cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
 
 /* Bonus Challenge - 2 EXTRA marks */ 
 /* make the layout responsive & mobile first design */ 
