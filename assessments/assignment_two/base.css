@@ -1,0 +1,131 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f8f9fa;
+  color: #212529;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+/*Header and navigation bar styling*/
+header {
+  background: #212529;
+  padding: 10px;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+}
+
+nav a {
+  margin: 0 15px;
+  color: #adb5bd;
+}
+
+nav a:hover {
+  color: white;
+}
+/*Targets the FIRST section inside main*/
+main > section:first-of-type {
+  text-align: center;
+  padding: 100px 20px;
+  background: #e9ecef;
+}
+
+main > section:first-of-type h1 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+main > section:first-of-type p {
+  max-width: 600px;
+  margin: 10px auto;
+  color: #6c757d;
+}
+/*Style link like a button*/
+main > section:first-of-type a {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 5px 15px;
+  border: 1px solid #adb5bd;
+  border-radius: 5px;
+  color: #6c757d;
+}
+
+/* Fixed section using Grid */
+main > section[aria-label="Product highlights"] {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+main > section[aria-label="Product highlights"] article {
+  padding: 40px 20px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+main > section[aria-label="Product highlights"] article:nth-child(odd) {
+  background: #343a40;
+  color: white;
+}
+
+main > section[aria-label="Product highlights"] article:nth-child(even) {
+  background: #dee2e6;
+}
+
+main > section[aria-label="Product highlights"] article div {
+  height: 200px;
+  background: #ced4da;
+  border-radius: 5px;
+  margin-top: 20px;
+}
+/*Footer styling*/
+footer {
+  background: #f8f9fa;
+  padding: 30px 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  font-size: 14px;
+}
+
+footer section {
+  margin-bottom: 20px;
+}
+
+footer h2 {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+footer ul {
+  list-style: none;
+  padding: 0;
+}
+
+footer li {
+  margin-bottom: 5px;
+}
+
+footer a {
+  color: #6c757d;
+}
+/*Hover effect for footer links*/
+footer a:hover {
+  color: #000;
+}
+
+@media (max-width: 768px) {
+  main > section[aria-label="Product highlights"] {
+    grid-template-columns: 1fr;
+  }
+
+  footer {
+    flex-direction: column;
+  }
+}
