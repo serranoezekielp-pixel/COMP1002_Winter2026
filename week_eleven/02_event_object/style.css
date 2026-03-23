@@ -1,0 +1,32 @@
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+}
+
+section {
+    margin-bottom: 40px;
+}
+
+#eventBtn,
+#menuLink {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 14px;
+    text-decoration: none;
+    border: 1px solid #333;
+    color: black;
+    background-color: #f4f4f4;
+    cursor: pointer;
+}
+
+#dropdownMenu {
+    margin-top: 15px;
+    padding: 12px;
+    width: 200px;
+    border: 1px solid #333;
+    background-color: #fafafa;
+}
+
+.hidden {
+    display: none;
+}

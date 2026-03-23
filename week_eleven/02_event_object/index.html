@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Object Demo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Event Object Demo</h1>
+
+    <section>
+        <h2>1. Exploring the Event Object</h2>
+        <button id="eventBtn">Click Me</button>
+
+        <p><strong>Event type:</strong> <span id="eventType">---</span></p>
+        <p><strong>Event target:</strong> <span id="eventTarget">---</span></p>
+    </section>
+
+    <section>
+        <h2>2. Using preventDefault()</h2>
+        <p>
+            Normally, clicking this link would open a new page.
+        </p>
+
+        <a id="menuLink" href="https://www.georgiancollege.ca/">Open Menu</a>
+
+        <div id="dropdownMenu" class="hidden">
+            <p>Select an option:</p>
+            <ul>
+                <li>Profile</li>
+                <li>Settings</li>
+                <li>Help</li>
+            </ul>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
